@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aya Khama — Data Science & AI Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Apply saved theme instantly before any paint to prevent flash -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+  ====================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+
+      <a href="#home" class="nav-logo">AK<span class="dot">.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- ✦ THEME TOGGLE BUTTON -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <span class="theme-toggle__track">
+            <span class="theme-toggle__thumb">
+              <!-- Sun icon (light mode) -->
+              <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              </svg>
+              <!-- Moon icon (dark mode) -->
+              <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </span>
+          </span>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ======================================================
+       HERO — Enhanced with motion background & strong branding
+  ====================================================== -->
+  <section class="hero" id="home">
+
+    <!-- Animated mesh background -->
+    <div class="hero-mesh" aria-hidden="true">
+      <div class="mesh-orb mesh-orb--1"></div>
+      <div class="mesh-orb mesh-orb--2"></div>
+      <div class="mesh-orb mesh-orb--3"></div>
+      <canvas class="hero-particles" id="heroCanvas"></canvas>
+    </div>
+
+    <!-- Grid overlay -->
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+    <div class="hero-wrapper">
+
+      <!-- LEFT: Text content -->
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal">
+          <span class="eyebrow-dot"></span>
+          Available for PFA Internship — 2026
+        </p>
+
+        <h1 class="hero-headline reveal delay-1">
+          <span class="headline-line headline-line--plain">Turning Data</span>
+          <span class="headline-line headline-line--italic">Into Intelligence</span>
+        </h1>
+
+        <p class="hero-name-sub reveal delay-2">
+          <span class="mono-bracket">//</span>
+          <strong>Aya Khama</strong> — Data Science & AI Engineering Student
+        </p>
+
+        <p class="hero-description reveal delay-3">
+          Specializing in Machine Learning, Process Automation & Data Analysis.
+          Building systems that learn, adapt, and create measurable impact.
+        </p>
+
+        <!-- Quick stats row -->
+        <div class="hero-stats reveal delay-3">
+          <div class="hstat"><span class="hstat-num">4+</span><span class="hstat-lbl">Projects</span></div>
+          <div class="hstat-divider"></div>
+          <div class="hstat"><span class="hstat-num">2</span><span class="hstat-lbl">Internships</span></div>
+          <div class="hstat-divider"></div>
+          <div class="hstat"><span class="hstat-num">10+</span><span class="hstat-lbl">Technologies</span></div>
+        </div>
+
+        <div class="hero-actions reveal delay-4">
+          <a href="assets\images\cv\AYA_KHAMA_CV.pdf" class="btn btn--primary" download="AYA_KHAMA_CV.pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+          <a href="#projects" class="btn btn--secondary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Illustration / Visual with real profile photo -->
+      <div class="hero-visual reveal delay-2">
+        <div class="hero-illustration">
+
+          <!-- Floating terminal window -->
+          <div class="ill-terminal">
+            <div class="term-header">
+              <span class="term-dot term-dot--red"></span>
+              <span class="term-dot term-dot--yellow"></span>
+              <span class="term-dot term-dot--green"></span>
+              <span class="term-title">model.py</span>
+            </div>
+            <div class="term-body">
+              <div class="term-line"><span class="tk-kw">import</span> <span class="tk-mod">pandas</span> <span class="tk-kw">as</span> pd</div>
+              <div class="term-line"><span class="tk-kw">from</span> <span class="tk-mod">sklearn</span> <span class="tk-kw">import</span> metrics</div>
+              <div class="term-line"> </div>
+              <div class="term-line"><span class="tk-fn">model</span> = <span class="tk-cls">RandomForest</span>()</div>
+              <div class="term-line"><span class="tk-fn">model</span>.<span class="tk-method">fit</span>(X_train, y)</div>
+              <div class="term-line term-line--typing"><span class="tk-cm"># accuracy: <span class="tk-num">94.7%</span></span><span class="term-cursor">|</span></div>
+            </div>
+          </div>
+
+          <!-- Floating metric cards -->
+          <div class="ill-card ill-card--1">
+            <span class="ill-card-icon">🎯</span>
+            <div>
+              <p class="ill-card-val">94.7%</p>
+              <p class="ill-card-lbl">Model Accuracy</p>
+            </div>
+          </div>
+
+          <div class="ill-card ill-card--2">
+            <span class="ill-card-icon">⚡</span>
+            <div>
+              <p class="ill-card-val">3× Faster</p>
+              <p class="ill-card-lbl">Data Processing</p>
+            </div>
+          </div>
+
+          <!-- Mini chart -->
+          <div class="ill-chart">
+            <p class="ill-chart-label">Predictive Model — Loss Curve</p>
+            <svg viewBox="0 0 160 60" class="ill-chart-svg">
+              <defs>
+                <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="var(--clr-accent)" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="var(--clr-accent)" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,55 Q20,45 40,35 Q60,25 80,20 Q100,15 120,12 Q140,10 160,8 L160,60 L0,60Z" fill="url(#chartFill)"/>
+              <path d="M0,55 Q20,45 40,35 Q60,25 80,20 Q100,15 120,12 Q140,10 160,8" fill="none" stroke="var(--clr-accent)" stroke-width="2"/>
+            </svg>
+          </div>
+
+          <!-- Avatar — Real Profile Photo -->
+          <div class="ill-avatar">
+            <div class="ill-avatar-ring"></div>
+            <div class="ill-avatar-ring ill-avatar-ring--2"></div>
+            <div class="photo-frame">
+              <img
+                src="assets/images/aya-khama.png"
+                alt="Aya Khama — Data Science & AI Engineering Student"
+                class="hero-photo"
+                loading="eager"
+              />
+            </div>
+            <div class="ill-badge ill-badge--tl">ML</div>
+            <div class="ill-badge ill-badge--br">AI</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       ABOUT
+  ====================================================== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="section-label">01 — About Me</p>
+          <h2 class="section-heading">Passionate about <em>intelligent systems</em> and the power of data</h2>
+          <p class="about-para">I am a Data Science & AI Engineering student with a strong focus on building real-world solutions through machine learning, automation, and data-driven decision making. My academic journey has been shaped by hands-on project work, from IoT sensor pipelines to intelligent chatbots.</p>
+          <p class="about-para">I thrive in interdisciplinary environments where data engineering meets human problems. My approach combines rigorous analytical thinking with practical implementation — from cleaning messy datasets to deploying predictive models in production-like contexts.</p>
+          <p class="about-para">Currently seeking a <strong>PFA internship</strong> where I can contribute meaningfully, learn from experienced teams, and develop scalable AI-powered solutions.</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Projects Completed</span></div>
+            <div class="stat"><span class="stat-num">2</span><span class="stat-label">Internships</span></div>
+            <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Technologies</span></div>
+          </div>
+        </div>
+        <div class="about-card reveal delay-2">
+          <div class="about-card-inner">
+            <h3>What drives me</h3>
+            <ul class="drive-list">
+              <li><span class="drive-icon">⚙️</span><span>Building automation that saves human hours</span></li>
+              <li><span class="drive-icon">🧠</span><span>Designing ML models that learn and adapt</span></li>
+              <li><span class="drive-icon">📊</span><span>Transforming messy data into clear insights</span></li>
+              <li><span class="drive-icon">🔗</span><span>Connecting hardware, software &amp; intelligence</span></li>
+              <li><span class="drive-icon">🚀</span><span>Shipping projects that create real impact</span></li>
+            </ul>
+            <div class="soft-skills">
+              <p class="soft-label">Soft Skills</p>
+              <div class="soft-tags">
+                <span>Communication</span><span>Teamwork</span><span>Leadership</span>
+                <span>Problem Solving</span><span>Curiosity</span><span>Proactivity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       EDUCATION — New section between About and Skills
+  ====================================================== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <p class="section-label reveal">02 — Education</p>
+      <h2 class="section-heading reveal">Academic <em>Background</em></h2>
+
+      <div class="edu-grid">
+
+        <!-- Card 1: Engineering Degree -->
+        <div class="edu-card edu-card--main reveal delay-1">
+          <div class="edu-card-accent"></div>
+          <div class="edu-card-body">
+            <div class="edu-card-top">
+              <div class="edu-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                </svg>
+              </div>
+              <div class="edu-badge">In Progress</div>
+            </div>
+            <h3 class="edu-school">École Marocaine des Sciences de l'Ingénieur</h3>
+            <p class="edu-acronym">EMSI — Casablanca</p>
+            <p class="edu-degree">Cycle Ingénieur</p>
+            <p class="edu-field">Data Science &amp; Intelligence Artificielle</p>
+            <div class="edu-meta">
+              <span class="edu-year">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                2022 – 2027
+              </span>
+              <span class="edu-type">Engineering Degree</span>
+            </div>
+            <div class="edu-modules">
+              <p class="edu-modules-label">Key Modules</p>
+              <div class="edu-module-tags">
+                <span>Machine Learning</span>
+                <span>Deep Learning</span>
+                <span>Big Data</span>
+                <span>Data Engineering</span>
+                <span>NLP</span>
+                <span>Computer Vision</span>
+                <span>Statistics</span>
+                <span>Cloud Computing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Baccalauréat -->
+        <div class="edu-card edu-card--bac reveal delay-2">
+          <div class="edu-card-accent"></div>
+          <div class="edu-card-body">
+            <div class="edu-card-top">
+              <div class="edu-icon edu-icon--teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div class="edu-badge edu-badge--completed">Completed</div>
+            </div>
+            <h3 class="edu-school">Baccalauréat Scientifique</h3>
+            <p class="edu-acronym">Sciences Physiques</p>
+            <p class="edu-degree">Secondary Education</p>
+            <p class="edu-field">Scientific Stream</p>
+            <div class="edu-meta">
+              <span class="edu-year">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                2022
+              </span>
+              <span class="edu-type">High School Diploma</span>
+            </div>
+            <div class="edu-highlight">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
+              Foundation in Mathematics, Physics & Analytical Thinking
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Education timeline decoration -->
+      <div class="edu-timeline reveal delay-3">
+        <div class="edu-tl-item">
+          <div class="edu-tl-dot"></div>
+          <span class="edu-tl-year">2022</span>
+          <span class="edu-tl-event">Baccalauréat &amp; EMSI enrollment</span>
+        </div>
+        <div class="edu-tl-line"></div>
+        <div class="edu-tl-item">
+          <div class="edu-tl-dot edu-tl-dot--now"></div>
+          <span class="edu-tl-year">2024</span>
+          <span class="edu-tl-event">3rd Year — AI Specialization</span>
+        </div>
+        <div class="edu-tl-line edu-tl-line--dashed"></div>
+        <div class="edu-tl-item">
+          <div class="edu-tl-dot edu-tl-dot--future"></div>
+          <span class="edu-tl-year">2027</span>
+          <span class="edu-tl-event">Engineering Degree (Expected)</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SKILLS
+  ====================================================== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <p class="section-label reveal">03 — Skills</p>
+      <h2 class="section-heading reveal">Technical <em>Arsenal</em></h2>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal delay-1">
+          <div class="skill-cat-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.798-1.338 2.798a1.612 1.612 0 01-1.423-.89l-.997-1.994M5 14.5l-1.402 1.402C2.6 16.902 3.57 18.7 4.938 18.7c.561 0 1.082-.316 1.423-.89l.997-1.994M5 14.5l1.97.493"/></svg>
+            </div>
+            <h3>Data & AI</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><span class="skill-name">Machine Learning</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">Data Analysis</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">Data Visualization</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">Predictive Modeling</span><div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal delay-2">
+          <div class="skill-cat-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+            </div>
+            <h3>Automation</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><span class="skill-name">Selenium</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">Web Scraping</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">Process Automation</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">Data Pipelines</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal delay-3">
+          <div class="skill-cat-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+            </div>
+            <h3>Development</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">Django</span><div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">REST APIs</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">SQL</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal delay-4">
+          <div class="skill-cat-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 2.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+            </div>
+            <h3>Tools & Databases</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><span class="skill-name">MongoDB</span><div class="skill-bar"><div class="skill-fill" style="--w:76%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">Git / GitHub</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">IoT / ESP32</span><div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div></div>
+            <div class="skill-tag"><span class="skill-name">Power BI / Matplotlib</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PROJECTS
+  ====================================================== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <p class="section-label reveal">04 — Projects</p>
+      <h2 class="section-heading reveal">Featured <em>Work</em></h2>
+      <div class="projects-grid">
+
+        <article class="project-card reveal delay-1">
+          <div class="project-img project-img--1">
+            <div class="project-img-overlay"><span class="project-num">01</span></div>
+            <div class="project-img-content">
+              <div class="proj-visual">
+                <div class="iot-node" style="top:30%;left:20%"></div>
+                <div class="iot-node" style="top:50%;left:50%"></div>
+                <div class="iot-node" style="top:25%;left:75%"></div>
+                <div class="iot-line" style="top:35%;left:22%;width:30%;transform:rotate(8deg)"></div>
+                <div class="iot-line" style="top:40%;left:52%;width:24%;transform:rotate(-12deg)"></div>
+                <svg class="proj-chart" viewBox="0 0 120 50"><polyline points="0,40 20,35 40,28 60,30 80,18 100,20 120,10" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"/><polyline points="0,45 20,42 40,38 60,40 80,32 100,28 120,22" fill="none" stroke="rgba(14,165,233,0.8)" stroke-width="1.5"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>IoT</span><span>ESP32</span><span>Python</span><span>ML</span></div>
+            <h3 class="project-title">Smart Predictive Maintenance IoT</h3>
+            <p class="project-desc">An end-to-end IoT solution that collects sensor data in real-time via ESP32 microcontrollers, processes it through a Python data pipeline, and feeds it into a machine learning model to predict equipment failures before they occur.</p>
+            <ul class="project-features">
+              <li>Real-time sensor data collection & streaming</li>
+              <li>Python data cleaning & statistical analysis</li>
+              <li>Predictive ML model for failure detection</li>
+              <li>Interactive visualization dashboards</li>
+            </ul>
+            <div class="project-footer">
+              <a href="#" class="btn-link">View Case Study →</a>
+              <a href="#" class="btn-link btn-link--ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal delay-2">
+          <div class="project-img project-img--2">
+            <div class="project-img-overlay"><span class="project-num">02</span></div>
+            <div class="project-img-content">
+              <div class="proj-visual">
+                <div class="chat-bubble chat-bubble--left">Hello! How can I help?</div>
+                <div class="chat-bubble chat-bubble--right">Recommend me a plan.</div>
+                <div class="chat-bubble chat-bubble--left">Based on your data, I suggest...</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>NLP</span><span>MongoDB</span><span>Python</span><span>AI</span></div>
+            <h3 class="project-title">Intelligent Chatbot with AI + MongoDB</h3>
+            <p class="project-desc">A context-aware intelligent chatbot powered by NLP and a recommendation engine. User interaction data is stored and managed in MongoDB, enabling personalized responses and dynamic suggestions that improve with usage.</p>
+            <ul class="project-features">
+              <li>Intelligent NLP-based response system</li>
+              <li>Personalized recommendation engine</li>
+              <li>MongoDB user data management</li>
+              <li>Scalable API-first architecture</li>
+            </ul>
+            <div class="project-footer">
+              <a href="#" class="btn-link">View Case Study →</a>
+              <a href="#" class="btn-link btn-link--ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal delay-3">
+          <div class="project-img project-img--3">
+            <div class="project-img-overlay"><span class="project-num">03</span></div>
+            <div class="project-img-content">
+              <div class="proj-visual">
+                <div class="code-lines">
+                  <div class="code-line" style="width:80%"><span style="color:#7dd3fc">selenium</span><span style="color:#94a3b8">.get(url)</span></div>
+                  <div class="code-line" style="width:65%"><span style="color:#86efac">data</span><span style="color:#94a3b8"> = scrape()</span></div>
+                  <div class="code-line" style="width:72%"><span style="color:#fbbf24">df</span><span style="color:#94a3b8">.clean().export()</span></div>
+                  <div class="code-line" style="width:55%"><span style="color:#c084fc">optimize(pipeline)</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Selenium</span><span>Automation</span><span>Pandas</span></div>
+            <h3 class="project-title">Automation & Data Processing System</h3>
+            <p class="project-desc">A robust automation framework using Python and Selenium for large-scale web data extraction. The pipeline automates data collection, applies intelligent cleaning routines, and exports analysis-ready datasets.</p>
+            <ul class="project-features">
+              <li>Automated web scraping at scale</li>
+              <li>Intelligent data cleaning & validation</li>
+              <li>Structured dataset export pipelines</li>
+              <li>Process optimization & scheduling</li>
+            </ul>
+            <div class="project-footer">
+              <a href="#" class="btn-link">View Case Study →</a>
+              <a href="https://github.com/ayakhama3/selenium-automation" class="btn-link btn-link--ghost" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal delay-4">
+          <div class="project-img project-img--4">
+            <div class="project-img-overlay"><span class="project-num">04</span></div>
+            <div class="project-img-content">
+              <div class="proj-visual">
+                <div class="ticket-card">
+                  <div class="ticket-header">🎫 Ticket #1042</div>
+                  <div class="ticket-status">● In Progress</div>
+                  <div class="ticket-tag">Backend · High Priority</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Django</span><span>Python</span><span>SQL</span><span>Web</span></div>
+            <h3 class="project-title">Ticketing System Web Application</h3>
+            <p class="project-desc">A full-featured web application for internal ticket management built with Django. Supports ticket creation, real-time status tracking, automated notifications, and multi-role user management.</p>
+            <ul class="project-features">
+              <li>Full ticket lifecycle management</li>
+              <li>Automated email notifications</li>
+              <li>Role-based access control</li>
+              <li>Secure Django backend + REST API</li>
+            </ul>
+            <div class="project-footer">
+              <a href="#" class="btn-link">View Case Study →</a>
+              <a href="#" class="btn-link btn-link--ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       EXPERIENCE
+  ====================================================== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <p class="section-label reveal">05 — Experience</p>
+      <h2 class="section-heading reveal">Professional <em>Journey</em></h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">Internship</span>
+              <span class="timeline-type">Technical Role</span>
+            </div>
+            <h3 class="timeline-title">Data Automation Engineer Intern</h3>
+            <h4 class="timeline-company">Provincial Directorate</h4>
+            <p class="timeline-desc">Designed and implemented automated data synchronization workflows between disparate government platforms, significantly reducing manual effort and human error. Applied process optimization techniques to improve data integrity, traceability, and operational efficiency across departments.</p>
+            <div class="timeline-skills">
+              <span>Python Automation</span><span>Data Sync</span><span>Process Optimization</span><span>Data Integrity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item--right reveal delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">Internship</span>
+              <span class="timeline-type">Professional Role</span>
+            </div>
+            <h3 class="timeline-title">Operations & Data Intern</h3>
+            <h4 class="timeline-company">Wafa Assurance</h4>
+            <p class="timeline-desc">Contributed to customer service operations and administrative workflow management within a leading insurance company. Developed strong professional communication skills and gained exposure to large-scale data management practices in a corporate environment.</p>
+            <div class="timeline-skills">
+              <span>Customer Service</span><span>Administrative Workflow</span><span>Professional Communication</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT
+  ====================================================== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <p class="section-label reveal">06 — Contact</p>
+      <h2 class="section-heading reveal">Let's <em>Connect</em></h2>
+      <p class="contact-sub reveal">I'm actively looking for a PFA internship opportunity. Whether you have a project, a role, or just want to talk AI — my inbox is open.</p>
+      <div class="contact-grid">
+        <div class="contact-info reveal delay-1">
+          <div class="contact-links">
+            <a href="mailto:aya.khama09@gmail.com" class="contact-link">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              </div>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">aya.khama09@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+212631391851" class="contact-link">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+              </div>
+              <div>
+                <span class="contact-link-label">Phone</span>
+                <span class="contact-link-value">+212 631 391 851</span>
+              </div>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">github.com/ayakhama</span>
+              </div>
+            </a>
+          </div>
+          <!-- CV Action Buttons -->
+          <div class="cv-actions">
+            <a href="assets/cv/AYA_KHAMA_CV.pdf"
+               class="btn btn--primary btn--large"
+               download="AYA_KHAMA_CV.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV
+            </a>
+            <a href="assets\images\cv\AYA_KHAMA_CV.pdf"
+               class="btn btn--ghost btn--large"
+               target="_blank"
+               rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              View CV
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal delay-2" onsubmit="handleForm(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Internship Opportunity" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="I'd love to discuss..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form-note" id="form-note"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-logo">AK<span class="dot">.</span></p>
+        <p class="footer-copy">© 2026 Aya Khama — Data Science & AI Engineer</p>
+        <p class="footer-built">Built with HTML, CSS & JS · Ready for GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
